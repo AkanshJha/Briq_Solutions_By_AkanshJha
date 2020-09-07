@@ -14,11 +14,11 @@ import java.util.Properties;
 
 public class ExcelToJSON {
 
-    private String currentDir = System.getProperty("user.dir");
-    private String propFilePath = currentDir + "\\configurations\\Briq_Test.properties";
+    private final String currentDir = System.getProperty("user.dir");
+    private final String propFilePath = currentDir + "\\configurations\\Briq_Test.properties";
     private final Properties prop = ReadPropertiesFile.loadPropertiesFile(propFilePath);
-    private String readExcelPath = prop.getProperty("excel_to_json");
-    private String jsonOutput = prop.getProperty("json_output_path");
+    private final String readExcelPath = prop.getProperty("excel_to_json");
+    private final String jsonOutput = prop.getProperty("json_output_path");
 
     /**
      * This test is being developed in order to extract the given data from the Excel and convert it to the JSON File with proper format.
