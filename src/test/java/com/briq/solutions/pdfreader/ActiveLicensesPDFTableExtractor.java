@@ -38,6 +38,8 @@ public class ActiveLicensesPDFTableExtractor {
         ArrayList<String> headers = null;
         ArrayList<String> dataToWriteInExcel = null;
         System.out.println("Number of Pages: "+pageNumber);
+
+
         for (int itr = 1; itr <= pageNumber; itr++) {
 
             pg = oe.extract(itr);
@@ -47,6 +49,7 @@ public class ActiveLicensesPDFTableExtractor {
 
                 if (itr == 1) {//Just to write headers in excel file
                     headers = pu.getPDFTableHeaders(tb);
+                    System.out.println(headers);
                     eu.writeExcelData(0, headers);
                 }
 
