@@ -64,7 +64,7 @@ public class RestAPIAutomationToExcel {
             obj = parser.parse(new FileReader(jsonResponseFile)); //Parsing the JSON file and storing it in Object obj.
             jsonArray = (JSONArray) obj;
 
-            jsonKeys = ((JSONObject) jsonArray.get(1)).keySet();
+            jsonKeys = ((JSONObject) jsonArray.get(0)).keySet();
             headers = new ArrayList<String>();
             dataToWriteInExcel = null;
 
@@ -77,8 +77,13 @@ public class RestAPIAutomationToExcel {
 
             //Converting jsonKeys to ArrayList, so that it can be written in the excel in Row one as Headers.
             for (Object jsonKey : jsonKeys) {
+                //System.out.println(jsonKey.toString());
                 headers.add(jsonKey.toString());
             }
+
+            //System.out.println(headers);
+            //System.out.println(headers.size());
+            //System.exit(0);
 
             indexOfLocation = headers.indexOf("location");
             System.out.println("index of location object in Array List : " + indexOfLocation);
@@ -96,7 +101,7 @@ public class RestAPIAutomationToExcel {
                     valueToBeWritten = jsonObject.get(jsonKey.toString()); //Getting value of Key.
                     try {
                         dataToWriteInExcel.add(valueToBeWritten.toString()); // Adding it to ArrayListObject
-                        System.out.println("Value of " + jsonKey.toString() + " : " + valueToBeWritten.toString());
+                        //System.out.println("Value of " + jsonKey.toString() + " : " + valueToBeWritten.toString());
                     }
                     catch(NullPointerException e){
                         System.out.println("NullPointerException Occurred because the requested key for this object does not exist.");
@@ -124,6 +129,10 @@ public class RestAPIAutomationToExcel {
                             System.out.println("Value of " + locationKey.toString() + " : " + valueToBeWritten.toString());
                             //eu.writeExcelData(lastRowNumber + 1, headers.indexOf(locationKey.toString()), valueToBeWritten); //This block of code will be writing each cell individually in a row
                         }
+                    }
+                    else{ // This block is being executed if the 1st JSONObject does not contain the location object in it.
+                        if (iteration == 1)
+                            eu.writeExcelData(0, headers); // Writing these headers to the Excel file.
                     }
                 }
                 //Once all the values added in dataToWriteInExcel object, for a Single JSONObject, we write this Object in the row.
@@ -153,7 +162,7 @@ public class RestAPIAutomationToExcel {
     }
 
     void runEndPoint() throws IOException {
-        ExcelUtilities eu = new ExcelUtilities();
+        //ExcelUtilities eu = new ExcelUtilities();
         RestAssured.baseURI = "https://data.sfgov.org/resource/p4e4-a5a7.json";
         //Request Object
         RequestSpecification httpReq = RestAssured.given();

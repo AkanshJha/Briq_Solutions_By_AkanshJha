@@ -55,7 +55,7 @@ public class BidsOfTransportPDFTableExtractor {
                         tableCell = tb.getCell(row, cell);
                         textElements = tableCell.getTextElements();
                         dataToWriteInExcel.add(pu.listToString(textElements));
-                        //System.out.print("  " + pu.listToString(textElements) + "  |");
+
                     }
                     dataToWriteInExcel.add(projectName);
                     eu.writeExcelData(rowToWrite++, dataToWriteInExcel);

@@ -68,7 +68,7 @@ public class WebScrapers_Final {
         ArrayList<String> excelHeaders = null;
 
         String url = prop.getProperty("target"); // URL value from properties file
-        String outputFile = currDir + "\\results\\Briq_Result.xlsx"; //Output Excel FIle Path
+        String outputFile = currDir + "\\results\\Briq_Result_WebScraper.xlsx"; //Output Excel FIle Path
         String parentWindow = driver.getWindowHandle(); // Parent window value
         int row = 1; //for Rows in Excel
         String headLine = "";
