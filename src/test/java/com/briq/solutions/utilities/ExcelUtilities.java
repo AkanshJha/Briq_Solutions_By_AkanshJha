@@ -1,4 +1,4 @@
-package com.briq.solutions.utillities;
+package com.briq.solutions.utilities;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;

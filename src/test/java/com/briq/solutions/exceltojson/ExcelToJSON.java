@@ -1,7 +1,7 @@
 package com.briq.solutions.exceltojson;
 
-import com.briq.solutions.utillities.ExcelUtilities;
-import com.briq.solutions.utillities.ReadPropertiesFile;
+import com.briq.solutions.utilities.ExcelUtilities;
+import com.briq.solutions.utilities.ReadPropertiesFile;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;

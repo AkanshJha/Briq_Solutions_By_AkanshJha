@@ -1,6 +1,6 @@
 package com.briq.solutions.restassuredapi;
 
-import com.briq.solutions.utillities.ExcelUtilities;
+import com.briq.solutions.utilities.ExcelUtilities;
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;

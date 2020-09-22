@@ -1,7 +1,7 @@
 package com.briq.solutions.webscraper.testcases;
 
-import com.briq.solutions.utillities.ExcelUtilities;
-import com.briq.solutions.utillities.ReadPropertiesFile;
+import com.briq.solutions.utilities.ExcelUtilities;
+import com.briq.solutions.utilities.ReadPropertiesFile;
 import com.briq.solutions.webscraper.pageobject.BizJournalsPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
@@ -15,6 +15,11 @@ import org.testng.annotations.Test;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
+
+/**
+ * This is used to Fetch the details from the given Target.
+ * And writes all the details in an excel file with the excel headers.
+ */
 
 public class WebScrapers_Final {
     private final String currDir = System.getProperty("user.dir");
@@ -57,7 +62,7 @@ public class WebScrapers_Final {
         BizJournalsPage bz = new BizJournalsPage(driver); //Page Factory class object
         ExcelUtilities eu = new ExcelUtilities(); //ExcelUtilities class object to perform excel operations
         Actions ac = new Actions(driver); //Selenium Actions class object
-        Set<String> windows = null; //For storing value of different browser windows
+        Set<String> windows = null; //For storing value of   different browser windows
 
         List<WebElement> newsCards = null; // locator value of all the cards
         WebElement time = null; // locator value of time

@@ -1,7 +1,7 @@
 package com.briq.solutions.webscraper.testcases;
 
-import com.briq.solutions.utillities.ExcelUtilities;
-import com.briq.solutions.utillities.ReadPropertiesFile;
+import com.briq.solutions.utilities.ExcelUtilities;
+import com.briq.solutions.utilities.ReadPropertiesFile;
 import com.briq.solutions.webscraper.pageobject.BizJournalsPage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;

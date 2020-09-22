@@ -1,4 +1,4 @@
-package com.briq.solutions.utillities;
+package com.briq.solutions.utilities;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

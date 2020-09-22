@@ -1,7 +1,7 @@
 package com.briq.solutions.pdfreader;
 
-import com.briq.solutions.utillities.ExcelUtilities;
-import com.briq.solutions.utillities.PDFUtilities;
+import com.briq.solutions.utilities.ExcelUtilities;
+import com.briq.solutions.utilities.PDFUtilities;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.testng.annotations.Test;
 import technology.tabula.*;

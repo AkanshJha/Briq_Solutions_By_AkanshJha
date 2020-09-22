@@ -1,4 +1,4 @@
-package com.briq.solutions.utillities;
+package com.briq.solutions.utilities;
 
 import technology.tabula.Table;
 import technology.tabula.TextChunk;
